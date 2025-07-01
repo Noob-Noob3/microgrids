@@ -187,7 +187,7 @@ class input_data:
 
 
         if dynamic_grid_prices:
-            self.grid_price = pd.read_csv(r'input_data\variable_Netzentgelte.csv',index_col=0,parse_dates=True)
+            self.grid_price = pd.read_csv(r'input_data/variable_Netzentgelte.csv',index_col=0,parse_dates=True)
 
             self.grid_price.index = self.snapshots
             self.grid_price = self.grid_price['Price_Ct_per_kWh']/100 # €/kWh
@@ -209,7 +209,7 @@ class input_data:
 
 
         elif prices=='stock':
-            self.price=pd.read_csv(fr'input_data\stock_prices_{sell_price}.csv',index_col=0)/1000
+            self.price=pd.read_csv(fr'input_data/stock_prices_{sell_price}.csv',index_col=0)/1000
             self.price.index = self.snapshots
 
             self.el_price = (self.price['Day Ahead Auktion']+self.grid_price)*1.19
