@@ -239,9 +239,9 @@ class input_data:
     def load_data(self,driving_days=5):
         
         # Ohne Nachtabsenkung
-        dhw_load = pd.read_csv(r'input_data\Lastprofil_ohneNachtabsenkung/dhw/neighbourhood.csv', comment="#", sep=";",usecols=[1])
-        heat_load = pd.read_csv(r'input_data\Lastprofil_ohneNachtabsenkung/htg/neighbourhood.csv', comment="#", sep=";",usecols=[2])
-        el_load = pd.read_csv(r'input_data\Lastprofil_ohneNachtabsenkung/el/neighbourhood.csv', comment="#", sep=";",usecols=[1])
+        dhw_load = pd.read_csv(r'input_data/Lastprofil_ohneNachtabsenkung/dhw/neighbourhood.csv', comment="#", sep=";",usecols=[1])
+        heat_load = pd.read_csv(r'input_data/Lastprofil_ohneNachtabsenkung/htg/neighbourhood.csv', comment="#", sep=";",usecols=[2])
+        el_load = pd.read_csv(r'input_data/Lastprofil_ohneNachtabsenkung/el/neighbourhood.csv', comment="#", sep=";",usecols=[1])
 
         #PV
         pv_pu = pd.read_csv("input_data/PVlast_1kw.csv", sep=",",index_col=0,usecols=[0,2])
